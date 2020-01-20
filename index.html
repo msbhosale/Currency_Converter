@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Currency convertor</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css">
+</head>
+
+<body>
+
+  <br>
+  <br>
+  <div class="container">
+    <br><br>
+    <div class="">
+      <h1 align="center"> Currency convertor </h1>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-lg-6">
+          <div class="form-group">
+            <label for="id">USD</label>
+            <input type="text" class="form-control" id="usd" onkeyup="setCurrency(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="firstname">INR</label>
+            <input type="text" class="form-control" id="inr">
+          </div>
+          <div class="form-group">
+            <label for="lastname">Euro</label>
+            <input type="text" class="form-control" id="euro">
+          </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-md-center">
+      <div class="col-lg-6">
+        <span align="center"> Made with curiosity by <a href="https://github.com/msbhosale" target="_blank">MS Bhosale</a> </span>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+
+  let inrPrice = 71.12;
+  let euroPrice = 0.902;
+
+  function setCurrency(usd) {
+
+    var inr = usd * inrPrice;
+    var euro = usd * euroPrice;
+
+    document.getElementById('inr').value = inr;
+    document.getElementById('euro').value = euro;
+
+  }
+
+
+</script>
+
+</html>
